@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/straphone/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/straphone/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/straphone",
+  "projects": {
+    "billing-service": {
+      "type": "application",
+      "root": "apps/billing-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/billing-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/billing-service/tsconfig.app.json"
+      }
+    },
+    "straphone": {
+      "type": "application",
+      "root": "apps/straphone",
+      "entryFile": "main",
+      "sourceRoot": "apps/straphone/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/straphone/tsconfig.app.json"
+      }
+    }
+  }
+}
