@@ -1,5 +1,5 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { CustomerService } from './core/customer/customer.service';
+import { CustomerService } from '../../base-station/src/core/customer/customer.service';
 
 @Injectable()
 export class AppService implements OnModuleInit {

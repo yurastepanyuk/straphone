@@ -10,13 +10,31 @@
   "monorepo": true,
   "root": "apps/straphone",
   "projects": {
-    "billing-service": {
+    "base-station": {
       "type": "application",
-      "root": "apps/billing-service",
+      "root": "apps/base-station",
       "entryFile": "main",
-      "sourceRoot": "apps/billing-service/src",
+      "sourceRoot": "apps/base-station/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/billing-service/tsconfig.app.json"
+        "tsConfigPath": "apps/base-station/tsconfig.app.json"
+      }
+    },
+    "billing": {
+      "type": "application",
+      "root": "apps/billing",
+      "entryFile": "main",
+      "sourceRoot": "apps/billing/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/billing/tsconfig.app.json"
+      }
+    },
+    "db": {
+      "type": "library",
+      "root": "libs/db",
+      "entryFile": "index",
+      "sourceRoot": "libs/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/db/tsconfig.lib.json"
       }
     },
     "straphone": {
